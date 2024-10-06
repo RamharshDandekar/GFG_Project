@@ -15,7 +15,7 @@ function App() {
     return (
         <div className="App">
             <Navbar /><br></br>
-            <Banner></Banner><br></br>
+            <Banner></Banner><br></br><br></br><br></br><br></br>
             <CircleAnimation /><br></br><br></br>
             <SubHeading 
                 title="Workshop Features" 

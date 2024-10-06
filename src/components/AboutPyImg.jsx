@@ -8,14 +8,14 @@ const AboutPyImg = () => {
     return (
         <div className="about-py-img-container">
             <div className="about-py-img-big">
-                <img src={FlipImg} alt="Flipping Big" />
+                <img src={FlipImg} alt="Flipping Big" className="flipping-updown" />
             </div>
             <div className="about-py-img-small-container">
                 <div className="about-py-img-small">
                     <img src={AboutPy1} alt="Small 1" />
                 </div>
                 <div className="about-py-img-small">
-                    <img src={AboutPy2} alt="Small 2" />
+                    <img src={AboutPy2} alt="Small 2" className="flipping" />
                 </div>
             </div>
         </div>
