@@ -1,8 +1,9 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   align-items: flex-end;
-  height: 300px;
+  height: 40vh;
+  /* Use viewport height for responsiveness */
   width: 100%;
   padding: 0;
   margin: 0;
@@ -13,21 +14,46 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  height: 140px;
+  height: 100%;
+  /* Full height of the container */
 }
 
 .circle {
-  width: 100px;
-  height: 100px;
+  width: 20vw;
+  /* Responsive width */
+  height: 20vw;
+  /* Responsive height */
+  max-width: 100px;
+  /* Limit max size */
+  max-height: 100px;
+  /* Limit max size */
   position: absolute;
   bottom: 0;
   transition: transform 0.2s ease;
 }
 
 .bar {
-  width: 100px;
+  width: 20vw;
+  /* Responsive width */
+  max-width: 100px;
+  /* Limit max size */
   border-radius: 13px;
   transition: height 0.27s ease;
   position: absolute;
   bottom: 0;
+}
+
+/* Media Queries for further adjustments */
+@media (max-width: 600px) {
+  .circle {
+    width: 30vw;
+    /* Adjust for smaller screens */
+    height: 30vw;
+    /* Adjust for smaller screens */
+  }
+
+  .bar {
+    width: 30vw;
+    /* Adjust for smaller screens */
+  }
 }

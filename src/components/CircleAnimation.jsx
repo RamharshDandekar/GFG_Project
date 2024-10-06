@@ -14,25 +14,24 @@ const AnimatedCircles = () => {
   useEffect(() => {
     let animationFrameId;
     const animate = () => {
-      setMaxHeight(prev => (prev < 200 ? prev + 1 : 0)); // Slower increment for medium animation speed
+      setMaxHeight(prev => (prev < 200 ? prev + 1 : 0));
       animationFrameId = requestAnimationFrame(animate);
     };
 
-    animate(); // Start the animation
+    animate();
 
-    return () => cancelAnimationFrame(animationFrameId); // Cleanup
+    return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
   useEffect(() => {
     setHeights([
-  Math.max(0, Math.min(maxHeight * 0.3, 140)), 
-  Math.max(0, Math.min(maxHeight * 0.4, 140)),
-  Math.max(0, Math.min(maxHeight * 0.5, 140)),
-  Math.max(0, Math.min(maxHeight * 0.6, 140)),
-  Math.max(0, Math.min(maxHeight * 0.7, 140)),
-  Math.max(0, Math.min(maxHeight * 0.8, 140)),
-]);
-
+      Math.max(0, Math.min(maxHeight * 0.3, 140)), 
+      Math.max(0, Math.min(maxHeight * 0.4, 140)),
+      Math.max(0, Math.min(maxHeight * 0.5, 140)),
+      Math.max(0, Math.min(maxHeight * 0.6, 140)),
+      Math.max(0, Math.min(maxHeight * 0.7, 140)),
+      Math.max(0, Math.min(maxHeight * 0.8, 140)),
+    ]);
   }, [maxHeight]);
 
   const images = [
@@ -58,7 +57,7 @@ const AnimatedCircles = () => {
             src={images[index]} 
             alt={`circle-${index}`} 
             className="circle" 
-            style={{ transform: `translateY(-${height * 2.5}px)` }} // Adjusted for 40% overlap
+            style={{ transform: `translateY(-${height * 2.5}px)` }} 
           />
         </div>
       ))}
