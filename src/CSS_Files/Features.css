@@ -1,31 +1,23 @@
-/* CSS for Features Component */
 .features-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    /* Adjust the gap as needed */
     padding: 20px;
 }
 
 .feature-item {
     overflow: hidden;
-    /* To maintain aspect ratio */
     border-radius: 10px;
-    /* Optional: for rounded corners */
 }
 
 .feature-item img {
     width: 100%;
     height: auto;
-    /* Maintain aspect ratio */
     display: block;
-    /* Remove extra space below the image */
 }
 
-/* Media Query for responsiveness */
 @media (max-width: 600px) {
     .features-container {
         grid-template-columns: 1fr;
-        /* Stack images on small screens */
     }
 }

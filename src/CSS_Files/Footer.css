@@ -1,6 +1,5 @@
-/* Footer.css */
 .footer {
-    background-color: green;
+    background-color: rgb(1, 136, 1);
     color: #fff;
     padding: 20px 0;
 }
@@ -23,28 +22,22 @@
 .footer-logo-container {
     display: flex;
     align-items: center;
-    /* Center the logos vertically */
     margin-bottom: 10px;
-    /* Add space below the logos */
 }
 
 .footer-logo {
     max-width: 15%;
     height: auto;
     margin-right: 10px;
-    /* Space between the logos */
 }
 
 .footer-text-logo {
     margin-left: 10px;
-    /* Space between the logos */
 }
 
 .footer-text-logo-img {
     max-width: 100%;
-    /* Adjust as necessary */
     height: auto;
-    /* Maintain aspect ratio */
 }
 
 .footer-columns {
@@ -102,7 +95,6 @@
     .footer-social-icons {
         flex: 1;
         justify-content: center;
-        /* Center the social icons */
     }
 }
 
