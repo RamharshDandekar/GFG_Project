@@ -14,7 +14,7 @@ const AnimatedCircles = () => {
   useEffect(() => {
     let animationFrameId;
     const animate = () => {
-      setMaxHeight(prev => (prev < 200 ? prev + 1 : 0));
+      setMaxHeight(prev => (prev < 200 ? prev + 1 : 0)); // Slower increment for medium animation speed
       animationFrameId = requestAnimationFrame(animate);
     };
 
@@ -25,13 +25,14 @@ const AnimatedCircles = () => {
 
   useEffect(() => {
     setHeights([
-      Math.max(0, Math.min(maxHeight * 0.1, 140)),
-      Math.max(0, Math.min(maxHeight * 0.3, 140)),
-      Math.max(0, Math.min(maxHeight * 0.5, 140)),
-      Math.max(0, Math.min(maxHeight * 0.7, 140)),
-      Math.max(0, Math.min(maxHeight * 0.9, 140)),
-      Math.max(0, Math.min(maxHeight, 140)),
-    ]);
+  Math.max(0, Math.min(maxHeight * 0.3, 140)), 
+  Math.max(0, Math.min(maxHeight * 0.4, 140)),
+  Math.max(0, Math.min(maxHeight * 0.5, 140)),
+  Math.max(0, Math.min(maxHeight * 0.6, 140)),
+  Math.max(0, Math.min(maxHeight * 0.7, 140)),
+  Math.max(0, Math.min(maxHeight * 0.8, 140)),
+]);
+
   }, [maxHeight]);
 
   const images = [
@@ -40,10 +41,10 @@ const AnimatedCircles = () => {
     CircleImage3,
     CircleImage4,
     CircleImage5,
-    CircleImage6
+    CircleImage6,
   ];
 
-  const colors = ['#ADD8E6', '#FFFFE0', '#ADD8E6', '#0000FF', '#FFB6C1', '#FFA07A'];
+  const colors = ['#ADD8E6', '#ffff80', '#ADD8E6', '#2b2bff', '#d8bbeb', '#FFA07A'];
 
   return (
     <div className="container">
@@ -51,13 +52,13 @@ const AnimatedCircles = () => {
         <div key={index} className="circle-container">
           <div 
             className="bar" 
-            style={{ height: `${height}px`, backgroundColor: colors[index] }} 
+            style={{ height: `${height * 3}px`, backgroundColor: colors[index] }} 
           />
           <img 
             src={images[index]} 
             alt={`circle-${index}`} 
             className="circle" 
-            style={{ transform: `translateY(-${height}px)` }} 
+            style={{ transform: `translateY(-${height * 2.5}px)` }} // Adjusted for 40% overlap
           />
         </div>
       ))}

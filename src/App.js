@@ -9,7 +9,7 @@ function App() {
     return (
         <div className="App">
             <Navbar /><br></br>
-            <Banner></Banner>
+            <Banner></Banner><br></br>
             <CircleAnimation />
         </div>
     );

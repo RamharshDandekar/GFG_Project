@@ -14,7 +14,6 @@
   align-items: center;
   position: relative;
   height: 140px;
-  /* Ensure each container can accommodate the circle's movement */
 }
 
 .circle {
@@ -22,18 +21,13 @@
   height: 100px;
   position: absolute;
   bottom: 0;
-  /* Start from the bottom */
   transition: transform 0.2s ease;
 }
 
 .bar {
   width: 100px;
-  /* Adjust width for better appearance */
   border-radius: 13px;
-  /* Create a curved effect */
-  transition: height 0.2s ease;
+  transition: height 0.27s ease;
   position: absolute;
-  /* Position bar absolutely */
   bottom: 0;
-  /* Ensure the bar starts from the bottom */
 }
