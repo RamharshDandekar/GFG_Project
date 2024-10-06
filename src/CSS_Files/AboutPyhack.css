@@ -3,29 +3,10 @@
     left: 0;
     top: 0;
     z-index: -1;
-    /* background-color: white; */
-    /* Adjust as needed */
     padding: 20px;
     width: 100%;
-    /* Make it responsive */
     max-width: 600px;
-    /* Adjust as needed */
     box-sizing: border-box;
-}
-
-.intro-box {
-    background-color: #f0f0f0;
-    /* Light gray background */
-    padding: 10px;
-    border-radius: 5px;
-    /* Rounded corners */
-    margin-bottom: 20px;
-}
-
-.intro-box p {
-    margin: 0;
-    font-size: 14px;
-    color: gray;
 }
 
 h1 {
@@ -53,7 +34,6 @@ button:hover {
     background-color: #32d859;
 }
 
-/* Responsive design */
 @media (max-width: 600px) {
     .banner {
         padding: 10px;
