@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../CSS_Files/Navbar.css';
-import GFGNavbarLogo from '../components/GFGNavbarLogo.png';
+import GFGNavbarLogo from '../components/GFGRCOEMChapterLogo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const [theme, setTheme] = useState('light');
@@ -58,7 +60,7 @@ const Navbar = () => {
                         onChange={handleTheme}
                     />
                     <label className="form-check-label" htmlFor="themeSwitch">
-                        <i className={theme === 'light' ? 'fas fa-sun' : 'fas fa-moon'}></i>
+                        <FontAwesomeIcon icon={theme === 'light' ? faSun : faMoon} />
                     </label>
                 </div>
             </div>
